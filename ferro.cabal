@@ -67,6 +67,16 @@ library
 
   hs-source-dirs: lib
 
+  build-depends:
+    , conduit
+    , pandoc
+    , readability
+    , req
+    , req-conduit
+    , smtp-mail
+    , unliftio
+    , xml-conduit
+
   exposed-modules:
     Ferro
 
