@@ -11,8 +11,13 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         overlays = [
+          # Make packages for other systems available for cross compilation
+          (_: _: flake-utils.lib.eachDefaultSystem (system: {
+            cross = import nixpkgs { inherit system overlays; };
+          }))
           inputs.haskell-overlay.overlay
-          (import ./nix/overlay.nix)
+          (import ./nix/overlays/calibre.nix)
+          (import ./nix/overlays/haskell.nix)
         ];
         pkgs = import nixpkgs { inherit system overlays; };
       in

@@ -8,7 +8,7 @@ haskell-overlay.mkOverlay
 {
   extensions = [
     (haskell-overlay.sources (haskellPackagesFinal: haskellPackagesPrev: {
-      ferro = ../.;
+      ferro = ../../.;
     }))
 
     (haskell-overlay.overrideCabal (haskellPackagesFinal: haskellPackagesPrev: {
