@@ -1,5 +1,7 @@
 module Main (main) where
 
+import qualified Ferro
+
 
 main :: IO ()
-main = pure ()
+main = Ferro.main

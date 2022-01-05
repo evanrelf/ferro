@@ -68,11 +68,11 @@ library
   hs-source-dirs: lib
 
   build-depends:
-    , conduit
+    , data-default
+    , modern-uri
     , pandoc
     , readability
     , req
-    , req-conduit
     , smtp-mail
     , unliftio
     , xml-conduit
